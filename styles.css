@@ -1,0 +1,187 @@
+@use "/styles/general";
+@use "/styles/fonts";
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+body {
+	background-color: #f2ebe3;
+}
+
+html {
+	font-size: 63.5%;
+}
+
+.container {
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+	padding-top: 2.7rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.container .card {
+	max-width: 45rem;
+}
+
+.container .card .mobile-hero {
+	width: 100%;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	vertical-align: middle;
+}
+
+.container .card .card-wrapper {
+	padding: 2.5rem;
+	padding-top: 2rem;
+	background-color: white;
+}
+
+.container .card .header {
+	font-weight: 700;
+	font-size: 3rem;
+	margin-top: 1.4rem;
+	margin-bottom: 1.2rem;
+	line-height: 3.2rem;
+	color: #1c232b;
+	font-family: "Fraunces", serif;
+}
+
+.container .card .title {
+	font-family: "montserrat";
+	font-weight: 500;
+	color: #6c7289;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+
+.container .card .discription {
+	font-size: 1.2rem;
+	line-height: 2.26rem;
+	color: #6c7289;
+	font-family: "montserrat";
+}
+
+.container .card .prices {
+	margin-top: 4rem;
+	margin-bottom: 1.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.container .card .prices .current {
+	font-family: "Fraunces", serif;
+	font-weight: 700;
+	font-size: 3.05rem;
+	color: #3c8067;
+}
+
+.container .card .prices .old {
+	color: #6c7289;
+	text-decoration: line-through;
+	margin-left: 2.4rem;
+	font-size: 1.3rem;
+}
+
+.container .card div.cart {
+	background-color: #3c8067;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	gap: 1rem;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 500;
+	padding: 1.5rem;
+	border-radius: 0.6rem;
+	cursor: pointer;
+}
+
+.container .card div.cart:hover {
+	background-color: #214538;
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		height: 100vh;
+	}
+	.container .card {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.container .card .mobile-hero {
+		display: none;
+	}
+	.container .card .desktop-hero {
+		display: unset;
+		width: 100%;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+	.container .card .card-wrapper {
+		padding: 4.5rem;
+		width: 90%;
+		width: 90rem;
+		border-bottom-right-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	.container .card .card-wrapper .title {
+		font-size: 1.5rem;
+	}
+	.container .card .card-wrapper .header {
+		margin-top: 3.8rem;
+		margin-bottom: 2.4rem;
+		font-size: 4rem;
+		line-height: 3.85rem;
+	}
+	.container .card .card-wrapper .discription {
+		font-size: 1.8rem;
+		padding-top: 1.7rem;
+		line-height: 2.8rem;
+	}
+	.container .card .card-wrapper .prices {
+		padding-bottom: 2.2rem;
+	}
+	.container .card .card-wrapper .prices .current {
+		font-size: 4.1rem;
+	}
+	.container .card .card-wrapper .prices .old {
+		font-size: 1.9rem;
+	}
+	.container .card .card-wrapper .cart {
+		padding: 2rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 1399px) {
+	.desktop-hero {
+		display: none;
+	}
+}
+/*# sourceMappingURL=styles.css.map */
