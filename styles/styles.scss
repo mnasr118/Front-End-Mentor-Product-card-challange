@@ -1,0 +1,176 @@
+@use "/styles/general";
+@use "/styles/fonts";
+//_fonts.scss
+$dark-cyan: hsl(158, 36%, 37%);
+$dark-cyan-hover: hsl(158, 36%, 20%);
+$cream: hsl(30, 38%, 92%);
+
+$dark-blue: hsl(212, 21%, 14%);
+$grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body {
+	background-color: $cream;
+}
+
+html {
+	font-size: 63.5%;
+}
+
+.container {
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+	padding-top: 2.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.card {
+		max-width: 45rem;
+		.mobile-hero {
+			width: 100%;
+			border-top-left-radius: 1rem;
+			border-top-right-radius: 1rem;
+			vertical-align: middle;
+		}
+
+		.card-wrapper {
+			padding: 2.5rem;
+			padding-top: 2rem;
+			background-color: $white;
+		}
+
+		.header {
+			font-weight: 700;
+			font-size: 3rem;
+			margin-top: 1.4rem;
+			margin-bottom: 1.2rem;
+			line-height: 3.2rem;
+			color: $dark-blue;
+			font-family: "Fraunces", serif;
+		}
+
+		.title {
+			font-family: "montserrat";
+			font-weight: 500;
+			color: $grayish-blue;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5rem;
+		}
+		.discription {
+			font-size: 1.2rem;
+			line-height: 2.26rem;
+			color: $grayish-blue;
+			font-family: "montserrat";
+		}
+		.prices {
+			margin-top: 4rem;
+			margin-bottom: 1.5rem;
+			display: flex;
+			align-items: center;
+			.current {
+				font-family: "Fraunces", serif;
+				font-weight: 700;
+				font-size: 3.05rem;
+				color: $dark-cyan;
+			}
+			.old {
+				color: $grayish-blue;
+				text-decoration: line-through;
+				margin-left: 2.4rem;
+				font-size: 1.3rem;
+			}
+		}
+		div.cart {
+			background-color: $dark-cyan;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			color: $white;
+			font-size: 1.4rem;
+			font-weight: 500;
+			padding: 1.5rem;
+
+			border-radius: 0.6rem;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $dark-cyan-hover;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		height: 100vh;
+
+		.card {
+			display: flex;
+			justify-content: center;
+
+			.mobile-hero {
+				display: none;
+			}
+			.desktop-hero {
+				display: unset;
+				width: 100%;
+				border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px;
+			}
+
+			.card-wrapper {
+				padding: 4.5rem;
+				width: 90%;
+				width: 90rem;
+				border-bottom-right-radius: 8px;
+				border-top-right-radius: 8px;
+
+				.title {
+					font-size: 1.5rem;
+				}
+
+				.header {
+					margin-top: 3.8rem;
+					margin-bottom: 2.4rem;
+					font-size: 4rem;
+					line-height: 3.85rem;
+				}
+
+				.discription {
+					font-size: 1.8rem;
+					padding-top: 1.7rem;
+					line-height: 2.8rem;
+				}
+				.prices {
+					padding-bottom: 2.2rem;
+
+					.current {
+						font-size: 4.1rem;
+					}
+					.old {
+						font-size: 1.9rem;
+					}
+				}
+				.cart {
+					padding: 2rem;
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1399px) {
+	.desktop-hero {
+		display: none;
+	}
+}
